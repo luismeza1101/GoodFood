@@ -2,20 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.button-register{
+  @apply rounded-2xl py-2 px-5 font-bold
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.form-register{
+  @apply bg-white flex flex-col items-center gap-4 py-5 px-6 rounded-3xl shadow-form w-[85%] max-w-[560px] relative
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.container-input-form{
+  @apply flex flex-col mx-auto w-full gap-1
+}
+
+.input-form{
+  @apply bg-gray-300  py-4 px-2 rounded-2xl text-lg outline-none
+}
+
+.button-form{
+  @apply bg-main w-[85%] py-3 rounded-full text-white text-lg hover:opacity-95
+}
+
+.contact-footer{
+  @apply flex gap-2
+}
+
+.filter{
+  @apply grid grid-cols-[70%_30%] grid-rows-custom text-lg py-3
+}
+
+.button-filter{
+  @apply bg-black text-white rounded-2xl w-[90%] ml-auto mr-0
 }
