@@ -6,7 +6,7 @@ export const addUser = async (
   password: string
 ) => {
   try {
-    const { error } = await supabase.auth.signUp({
+    const { error, data } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -15,11 +15,12 @@ export const addUser = async (
     });
 
     if (error) throw new Error("Server error. Try again later.");
-    
+
+    if(!('email_verified' in data.user!.user_metadata)) throw new Error('Email already registered')
+
     return { succes: true, message: "Successful registration" };
 
   } catch (error: any) {
-    console.error("Error registering user", error);
     return {
       succes: false,
       message: error.message || "An unexpected error occurred.",

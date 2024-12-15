@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { Loader_Main } from "@/components/Loaders";
 import Link from "next/link";
 
 const layoutMain = ({ children }: Readonly<{ children: React.ReactNode }>) => {
@@ -90,6 +91,7 @@ const layoutMain = ({ children }: Readonly<{ children: React.ReactNode }>) => {
           </Link>
         </p>
       </footer>
+      <Loader_Main/>
     </>
   );
 };

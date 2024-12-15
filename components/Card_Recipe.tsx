@@ -6,7 +6,7 @@ const Card_Recipe: React.FC<Type_Recipes> = ({ id, image, title }) => {
   return (
     <Link
       href={`/${id}`}
-      className="bg-white rounded-2xl flex p-5 desktop:flex-col desktop:gap-4"
+      className="bg-white rounded-2xl flex px-5 py-8 desktop:flex-col desktop:gap-4"
     >
       <div className="flex-1 relative min-h-24 w-[80%] mx-auto">
         {image ? (
@@ -15,6 +15,7 @@ const Card_Recipe: React.FC<Type_Recipes> = ({ id, image, title }) => {
             alt="image"
             fill
             loading="lazy"
+            sizes="(max-width: 200px)"
             className="rounded-2xl"
           />
         ) : (

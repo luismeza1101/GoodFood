@@ -1,6 +1,6 @@
 "use client";
 
-import Loader from "@/components/Loader";
+import { Loader_Recipes } from "@/components/Loaders";
 import Options_Search from "@/components/Options_Search";
 import Result_Recipes from "@/components/Result_Recipes";
 import { getRecipesRandoms } from "@/services/GetRecipesRandom";
@@ -79,7 +79,7 @@ const pageHome = () => {
         </div>
       ) : (
         <div className="w-full col-span-2 flex items-center justify-center min-h-[50vh] desktop:col-start-2 desktop:row-start-3">
-          <Loader />
+          <Loader_Recipes />
         </div>
       )}
     </main>

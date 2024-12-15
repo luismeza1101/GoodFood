@@ -19,7 +19,7 @@
 }
 
 .button-form{
-  @apply bg-main w-[85%] py-3 rounded-full text-white text-lg hover:opacity-95
+  @apply bg-main w-[85%] flex items-center justify-center gap-5 py-3 rounded-full text-white text-lg hover:opacity-95
 }
 
 .contact-footer{

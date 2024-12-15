@@ -1,4 +1,7 @@
+'use client'
+
 import { motion } from "motion/react";
+import { useEffect } from "react";
 
 interface Props {
   message: string;
@@ -6,6 +9,15 @@ interface Props {
 }
 
 export const Card_Error: React.FC<Props> = ({ message, setShowMessage }) => {
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMessage(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <motion.section
       className="max-w-[370px] w-[90%] flex gap-3 items-center justify-center py-3 px-4 rounded-lg text-base font-medium  text-white bg-[#f85149]"
@@ -31,27 +43,6 @@ export const Card_Error: React.FC<Props> = ({ message, setShowMessage }) => {
         <path d="M12 17h.01"></path>
       </svg>
       <p className="flex justify-center items-center">{message}</p>
-      <button
-        type="button"
-        aria-label="close-error"
-        className="rounded-md text-white border border-white opacity-40 hover:opacity-100"
-        onClick={() => setShowMessage(false)}
-      >
-        <svg
-          stroke="currentColor"
-          fill="none"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          height="25"
-          width="25"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M18 6 6 18"></path>
-          <path d="m6 6 12 12"></path>
-        </svg>
-      </button>
     </motion.section>
   );
 };

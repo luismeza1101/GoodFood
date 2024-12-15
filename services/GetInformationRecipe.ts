@@ -18,7 +18,9 @@ export const getInformationRecipe = async (id: number) => {
         instructions: data.instructions,
         readyInMinutes: data.readyInMinutes,
         image: data.image,
-        ingredients: data.extendedIngredients
+        ingredients: data.extendedIngredients,
+        servings: data.servings,
+        diets: data.diets
       }
       return filterData;
     } catch (error) {

@@ -13,6 +13,8 @@ export interface Information_Recipe {
   readyInMinutes: number
   image: string
   ingredients: ExtendedIngredient[]
+  servings: number
+  diets: string[]
 }
 
 export interface User{

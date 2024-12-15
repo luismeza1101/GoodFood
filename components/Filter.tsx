@@ -15,10 +15,9 @@ const handleAddFilter = (
   value: string | null
 ) => {
   evt.preventDefault();
-  if (!value) {
-    alert("You must fill in the blank");
-    return;
-  }
+
+  if (!value) return;
+  
   functionForAdd(value.trim().toLowerCase());
 };
 

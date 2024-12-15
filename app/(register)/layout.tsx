@@ -6,8 +6,8 @@ const layoutRegister = ({
   return (
     <>
       {/* Layout Mobile */}
-      <div className="w-full min-h-screen flex flex-col bg-register bg-cover items-center gap-16 desktop:hidden py-6">
-        <Image src="/imgs/logo-white.png" alt="Logo" width={200} height={200} />
+      <div className="w-full min-h-screen flex flex-col bg-register bg-cover items-center gap-6 desktop:hidden py-3">
+        <Image src="/imgs/logo-white.png" alt="Logo" width={160} height={160} />
         {children}
       </div>
       {/* Layout Desktop */}

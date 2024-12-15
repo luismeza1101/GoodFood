@@ -27,7 +27,8 @@ const Button_Favorite: React.FC<Props> = ({ recipeId, image, title }) => {
 
   const handleAddFavorite = async () => {
     if (!user?.sub) {
-      alert("You must log in");
+     setMessage({status: false, message: 'You must log in'})
+     setShowMessage(true);
       return;
     }
 
@@ -46,7 +47,8 @@ const Button_Favorite: React.FC<Props> = ({ recipeId, image, title }) => {
 
   const handleDeleteFavorite = async () => {
     if (!user?.sub) {
-      alert("You must log in");
+      setMessage({status: false, message: 'You must log in'})
+      setShowMessage(true);
       return;
     }
 
@@ -64,7 +66,8 @@ const Button_Favorite: React.FC<Props> = ({ recipeId, image, title }) => {
   useEffect(() => {
     const handleCheckFavorite = async () => {
       if (!user?.sub) {
-        alert("You must log in");
+        setMessage({status: false, message: 'You must log in'})
+        setShowMessage(true);
         return;
       }
       const { succes, isFavorite, id } = await checkIsFavorite(
@@ -83,12 +86,7 @@ const Button_Favorite: React.FC<Props> = ({ recipeId, image, title }) => {
       }
     };
 
-    if (user?.sub) {
-      const timer = setTimeout(() => {
-        handleCheckFavorite();
-      }, 500);
-      return () => clearTimeout(timer);
-    }
+    handleCheckFavorite()
   }, [user?.sub, launchCheckFavorite]);
 
   return (

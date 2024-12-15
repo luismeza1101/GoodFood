@@ -35,7 +35,7 @@ const Header = () => {
   return (
     <>
       <header className="flex items-center justify-between w-full px-6 py-3 sticky top-0 bg-white z-40 desktop:px-20">
-        <Image src="/imgs/logo.png" alt="Logo" width={70} height={70} />
+        <Image src="/imgs/logo.png" alt="Logo" width={70} height={70} className="w-auto h-auto" priority/>
         {isAuth ? (
           <div className="flex gap-8 items-center">
             <Link href="/home">

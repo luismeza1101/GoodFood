@@ -1,7 +1,7 @@
 "use client";
 
 import Card_Recipe from "@/components/Card_Recipe";
-import Loader from "@/components/Loader";
+import { Loader_Recipes } from "@/components/Loaders";
 import { getFavorites } from "@/services/GetFavorites";
 import { authStore } from "@/stores/AuthStore";
 import { Type_Recipes } from "@/types/types";
@@ -46,7 +46,7 @@ const pageFavorites = () => {
             )}
           </section>
         ) : (
-          <Loader />
+          <Loader_Recipes />
         )}
       </div>
     </main>
