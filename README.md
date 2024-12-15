@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GoodFoos
 
-## Getting Started
+## Descripción
+Este proyecto es una páginar web de recetas de cocina donde los usuarios pueden explorar diferentes recetas y filtrarlas según sus preferencias. La idea principal es brindar una plataforma amigable y práctica para descubrir nuevas opciones culinarias de forma rápida y sencilla.
 
-First, run the development server:
+## Características
+- **Exploración de recetas**: Navega entre una amplia variedad de recetas con descripciones detalladas.
+- **Filtrado avanzado**: Filtra las recetas por tipo de dieta, inclusión de ingredientes, exclusión de ingredientes.
+- **Diseño responsivo**: Optimizado para ser usado tanto en computadoras como en dispositivos móviles.
+- **Interfaz intuitiva**: Navegación sencilla y diseño moderno.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologías utilizadas
+- **Frontend**: Next.js, TypeScript, Tailwind CSS
+- **Backend**: SupaBase
+- **Despliegue**: Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Uso
+1. Navega entre las recetas disponibles en la página principal.
+2. Utiliza los filtros para encontrar las recetas que más se adapten a tus necesidades.
+3. Haz clic en una receta para ver los detalles completos.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contacto
+Si tienes preguntas, sugerencias o deseas colaborar, no dudes en contactarme:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Correo**: [ednilsonluis.11@gmail.com](mailto:ednilsonluis.11@gmail.com)
+- **LinkedIn**: [linkedin.com/in/luismeza](https://www.linkedin.com/in/luismeza11/)
+- **Porfolio**: [luismeza.com](https://luismeza11.netlify.app/)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+¡Espero que disfrutes explorando nuevas recetas con esta web!
