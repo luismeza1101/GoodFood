@@ -35,6 +35,7 @@ const Options: React.FC<PropsOptions> = ({handleShowSideBar, showSideBar, setSho
     localStorage.removeItem('user')
     setIsAuth(false)
     setShowSideBar(false)
+    window.location.reload()
     redirect('/home')
   }
 
