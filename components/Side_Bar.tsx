@@ -1,6 +1,5 @@
 import { authStore } from "@/stores/AuthStore";
 import { motion } from "motion/react";
-import { redirect } from "next/navigation";
 
 interface Props {
   showSideBar: boolean;
