@@ -5,6 +5,8 @@ import { Funnel_Sans} from 'next/font/google'
 const funnel_sans = Funnel_Sans({
   subsets: ['latin'],
   weight: '400',
+  style: 'normal',
+  display:'swap',
   variable: '--font-funnel_sans',
 })
 
@@ -19,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${funnel_sans.variable}`}>
       <body
-        className={`${funnel_sans.variable} font-funnel_sans bg-fondo`}
+        className={`bg-fondo`}
       >
         {children}
       </body>
