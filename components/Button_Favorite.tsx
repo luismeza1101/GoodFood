@@ -66,8 +66,6 @@ const Button_Favorite: React.FC<Props> = ({ recipeId, image, title }) => {
   useEffect(() => {
     const handleCheckFavorite = async () => {
       if (!user?.sub) {
-        setMessage({status: false, message: 'You must log in'})
-        setShowMessage(true);
         return;
       }
       const { succes, isFavorite, id } = await checkIsFavorite(
