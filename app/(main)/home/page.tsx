@@ -34,7 +34,7 @@ const PageHome = () => {
 
   useEffect(() => {
     handleGetRecipes();
-  }, [handleGetRecipes]);
+  }, []);
 
   return (
     <main className="w-full text-center p-4 grid grid-cols-[75%_25%] grid-rows-[50px_100px_3fr] desktop:w-[95%] desktop:mx-auto desktop:grid-cols-[30%_70%] desktop:grid-rows-[50px_100px_1fr] xl:w-[90%]">

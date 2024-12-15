@@ -191,7 +191,7 @@ const CheckAccount: React.FC<Props> = ({ handleShowCheckAccount }) => {
     <div className="fixed w-full h-screen top-0 left-0 bg-overlay flex items-center justify-center z-50">
       <section className="bg-white p-5 rounded-2xl flex flex-col gap-4 relative max-w-[90%]">
         <Image src="/imgs/logo.png" alt="Logo" width={100} height={100} />
-        <span className="text-3xl font-semibold mt-4">It's almost there</span>
+        <span className="text-3xl font-semibold mt-4">It&apos;s almost there</span>
         <p className="text-2xl">
           Activate your account from the email address you entered <br /> It may
           take a few minutes
