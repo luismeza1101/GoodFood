@@ -1,4 +1,4 @@
-# GoodFoos
+# GoodFood
 
 ## Descripción
 Este proyecto es una páginar web de recetas de cocina donde los usuarios pueden explorar diferentes recetas y filtrarlas según sus preferencias. La idea principal es brindar una plataforma amigable y práctica para descubrir nuevas opciones culinarias de forma rápida y sencilla.
