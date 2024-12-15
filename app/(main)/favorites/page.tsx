@@ -7,7 +7,7 @@ import { authStore } from "@/stores/AuthStore";
 import { Type_Recipes } from "@/types/types";
 import { useEffect, useState } from "react";
 
-const pageFavorites = () => {
+const PageFavorites = () => {
   const [recipes, setRecipes] = useState<Type_Recipes[]>([]);
   const [loader, setLoader] = useState(false);
   const { user } = authStore();
@@ -31,7 +31,7 @@ const pageFavorites = () => {
       }
     };
     handleRecipes();
-  }, []);
+  }, [user?.sub]);
 
   return (
     <main className="w-full min-h-[70vh] p-6 desktop:w-[90%] xl:w-[80%] mx-auto flex flex-col">
@@ -42,7 +42,7 @@ const pageFavorites = () => {
             {recipes.length > 0 ? (
               recipes.map((recipe) => <Card_Recipe key={recipe.id} {...recipe} />)
             ) : (
-              <p className="text-3xl text-center col-span-3">You don't have favorite recipes, add recipes to save them</p>
+              <p className="text-3xl text-center col-span-3">You don&apos;t have favorite recipes, add recipes to save them</p>
             )}
           </section>
         ) : (
@@ -53,4 +53,4 @@ const pageFavorites = () => {
   );
 };
 
-export default pageFavorites;
+export default PageFavorites;

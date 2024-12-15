@@ -10,7 +10,7 @@ import { Card_Error } from "@/components/Cards_Status";
 import { userIsRegistered } from "@/services/UserIsRegistered";
 import { Loader_Forms } from "@/components/Loaders";
 
-const pageLogin = () => {
+const PageLogin = () => {
   const [email, setEmail] = useState<string | null>(null)
   const [password, setPassword] = useState<string | null>(null)
   const [message, setMessage] = useState<string | null>(null)
@@ -24,7 +24,7 @@ const pageLogin = () => {
   useEffect(() => {
     const isRegistered = userIsRegistered()
     if(isRegistered) router.push('/home')
-  },[])
+  },[router])
 
   const handleLogin = async (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
@@ -147,4 +147,4 @@ const pageLogin = () => {
   );
 };
 
-export default pageLogin;
+export default PageLogin;

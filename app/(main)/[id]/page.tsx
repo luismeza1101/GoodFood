@@ -2,7 +2,7 @@ import Button_Favorite from "@/components/Button_Favorite";
 import { getInformationRecipe } from "@/services/GetInformationRecipe";
 import Image from "next/image";
 
-const pageDynamic = async ({ params }: { params: Promise<{ id: number }> }) => {
+const PageDynamic = async ({ params }: { params: Promise<{ id: number }> }) => {
   const id = (await params).id;
 
   const information = await getInformationRecipe(id);
@@ -54,4 +54,4 @@ const pageDynamic = async ({ params }: { params: Promise<{ id: number }> }) => {
   );
 };
 
-export default pageDynamic;
+export default PageDynamic;

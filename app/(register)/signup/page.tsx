@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 
-const pageSignUp = () => {
+const PageSignUp = () => {
   const [showCheckAccount, setShowCheckAccount] = useState(false);
   const [userName, setUserName] = useState<null | string>(null);
   const [email, setEmail] = useState<null | string>(null);
@@ -24,7 +24,7 @@ const pageSignUp = () => {
   useEffect(() => {
       const isRegistered = userIsRegistered()
       if(isRegistered) router.push('/home')
-    },[])
+    },[router])
 
   const handleShowCheckAccount = () => {
     if(showCheckAccount){
@@ -180,7 +180,7 @@ const pageSignUp = () => {
   );
 };
 
-export default pageSignUp;
+export default PageSignUp;
 
 interface Props {
   handleShowCheckAccount: () => void;
