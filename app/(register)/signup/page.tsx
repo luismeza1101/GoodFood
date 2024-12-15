@@ -2,13 +2,12 @@
 
 import { Card_Error } from "@/components/Cards_Status";
 import { Loader_Forms } from "@/components/Loaders";
+import useVerifiedUserRegistered from "@/hooks/useVerifiedUserRegistered";
 import { addUser } from "@/services/AddUser";
-import { userIsRegistered } from "@/services/UserIsRegistered";
 import { AnimatePresence } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 
 const PageSignUp = () => {
   const [showCheckAccount, setShowCheckAccount] = useState(false);
@@ -19,12 +18,8 @@ const PageSignUp = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showLoader, setShowLoader] = useState(false)
-  const router = useRouter()
 
-  useEffect(() => {
-      const isRegistered = userIsRegistered()
-      if(isRegistered) router.push('/home')
-    },[router])
+  useVerifiedUserRegistered()
 
   const handleShowCheckAccount = () => {
     if(showCheckAccount){

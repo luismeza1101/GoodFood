@@ -36,7 +36,6 @@ const Options: React.FC<PropsOptions> = ({handleShowSideBar, showSideBar, setSho
     setIsAuth(false)
     setShowSideBar(false)
     window.location.reload()
-    redirect('/home')
   }
 
   return(

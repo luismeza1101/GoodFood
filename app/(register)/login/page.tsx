@@ -3,12 +3,12 @@
 import { loginUser } from "@/services/LoginUser";
 import { authStore } from "@/stores/AuthStore";
 import Link from "next/link";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence } from "motion/react";
 import { Card_Error } from "@/components/Cards_Status";
-import { userIsRegistered } from "@/services/UserIsRegistered";
 import { Loader_Forms } from "@/components/Loaders";
+import useVerifiedUserRegistered from "@/hooks/useVerifiedUserRegistered";
 
 const PageLogin = () => {
   const [email, setEmail] = useState<string | null>(null)
@@ -21,10 +21,7 @@ const PageLogin = () => {
   const {setIsAuth, setUser} = authStore()
   const router = useRouter()
 
-  useEffect(() => {
-    const isRegistered = userIsRegistered()
-    if(isRegistered) router.push('/home')
-  },[router])
+  useVerifiedUserRegistered()
 
   const handleLogin = async (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault();

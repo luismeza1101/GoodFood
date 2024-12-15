@@ -2,6 +2,7 @@
 
 import Card_Recipe from "@/components/Card_Recipe";
 import { Loader_Recipes } from "@/components/Loaders";
+import useVerifiedUserRegistered from "@/hooks/useVerifiedUserRegistered";
 import { getFavorites } from "@/services/GetFavorites";
 import { authStore } from "@/stores/AuthStore";
 import { Type_Recipes } from "@/types/types";
@@ -11,6 +12,8 @@ const PageFavorites = () => {
   const [recipes, setRecipes] = useState<Type_Recipes[]>([]);
   const [loader, setLoader] = useState(false);
   const { user } = authStore();
+
+  useVerifiedUserRegistered()
 
   useEffect(() => {
     const handleRecipes = async () => {
